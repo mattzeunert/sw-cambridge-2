@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/thirdparty/jquery.mobile.custom.structure.css"> 
+		<link rel="stylesheet" href="styles/stylesheets/screen.css">
+		<link rel="stylesheet" type="text/css" href="styles/font/icoentypo/entypo.css" />
+	
+	</head>
+	<body>
+		
+		
+		<div data-role="page" class="app_window" id="app_splashscreen" data-transition="pop">
+			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative;top:0px; margin-left:auto; margin-right:auto; ">
+				<div style="height:100px; width:200px; margin-left:auto; border:1px solid; margin-right:auto;">
+					<img src="content/images/bus.png" style=" height:60px; position:relative; left:10px; top:10px;">
+					<span style="color:white; font-size:23px; left:50px; top:40px; "> Jesse Bus
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" id="app_search" data-trasition="slide">
+			app search
+		</div>
+		
+		<div data-role="page" id="app_search_results" data-trasition="slide">
+			app search results
+		</div>
+		
+		<!-- Page transitions for displaying city results results -->
+		<div data-role="page" id="app_search_city" data-trasition="slide">
+		
+			search cities
+		
+		</div>
+		<!-- Page transitions for displaying city results -->
+		<div data-role="page" id="app_search_class" data-trasition="slide">
+			search classes
+		</div>
+		
+		<div ng-view></div>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile.js"></script>
+		<script src="app.js"></script>
+		
+		
+	</body>
+</html>
