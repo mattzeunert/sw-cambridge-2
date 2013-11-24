@@ -166,6 +166,19 @@ $(".app-search-start").on( "click", function( event ){
 			{
 			  transition: "slide"
 			});
+	var journeys = journeysByPrice();
+	//console.log(journeys);
+	for(var i=0; i < 5 ; i++) {
+		var replacediv = " <div  class='app-journey-select'><div class='app-journey-logo'> <img src='http://www.steveross.ca/gridburo/images/sm_busone.jpg' class='app-journey-logo-img'></div>";
+		
+		replacediv +="<div class='app-journey-dep'> " + moment(journeys[i].depart).format('MMM dd YYYY, h:mm:ss a') + " </div>	<div class='app-journey-arr'> " + moment(journeys[i].arrival).format('MM dd YYYY, h:mm:ss a') + "</div> <div class='app-journey-e-info'>";
+		replacediv +="</div><div class='app-journey-price'><span class='app-comfort-price'> " +journeys[i].price + "</span><span class='app-comfort-currency'> S/.</span></div>";
+		replacediv +="<div class='app-journey-comfort'> <span class='icon-star app-comfort-icon'> </span>		<span class='app-comfort-detail'> " +journeys[i].class + " </span></div>";
+		replacediv +="<div class='app-journey-next'><span class='icon-arrow-right3 app-journey-next-icon'> </span></div></div>";
+
+		$(".app-journey-list").append(replacediv);
+	}
+			
 			
 });
 
@@ -206,7 +219,7 @@ $(".app-menu-map").on( "click", function( event ){
 			{
 			  transition: "slide"
 			});
-	app.updatemap(cities,"#app-map-viewer");
+	app.updatemap(cities,"app-map-viewer");
 	
 });
 
