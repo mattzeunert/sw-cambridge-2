@@ -159,9 +159,14 @@ $(".app-location-to").on( "click", function( event ){
 	
 });
 
-$(".app-search-date").on( "click", function( event ){
+$(".app-search-start").on( "click", function( event ){
 	
 	
+	$.mobile.changePage("#app_search_journey_details" ,
+			{
+			  transition: "slide"
+			});
+			
 });
 
 $(".app-menu-search").on( "click", function( event ){

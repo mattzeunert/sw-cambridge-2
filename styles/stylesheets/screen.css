@@ -156,3 +156,115 @@ body {
 
 }
 
+.app-journey-logo {
+
+	 position:absolute;
+	 top:8%;
+	 left:2%; 
+	 height:80%; 
+	 width:20%; 
+	 
+}
+
+.app-journey-logo-img {
+	position:relative;
+	height:100%;
+	
+	//width:100%; 
+}
+
+.app-journey-dep {
+
+	position:absolute;
+	top:15%;
+	left:28%;
+	height:45%;
+	width:35%;
+	font-size:14px;
+}
+
+.app-journey-arr {
+
+	position:absolute;
+	top:55%; 
+	left:28%;
+	height:45%;
+	width:35%;
+	font-size:14px;
+}
+
+.app-journey-price {
+
+	 position:absolute;
+	 top:15%; 
+	 left:78%;  
+	 height:60%;
+	 width:12%;
+}
+
+.app-journey-comfort {
+
+	 position:absolute;
+	 top:15%; 
+	 left:64%;  
+	 height:60%;
+	 width:12%;
+}
+
+.app-journey-next {
+
+	position:absolute;
+	 top:15%; 
+	 left:92%;  
+	 height:60%;
+	 width:6%;
+}
+
+.app-comfort-icon {
+	font-size:22px;
+	position:absolute;
+	top:5%;
+	left:25%;
+	color:#0077cc;
+}
+
+.app-comfort-detail {
+	font-size:25px;
+	position:absolute;
+	top:40%;
+	left:30%;
+}
+
+.app-comfort-price {
+	font-size:25px;
+	position:absolute;
+	top:40%;
+	left:5%;
+
+}
+
+.app-comfort-currency{
+	font-size:18px;
+	position:absolute;
+	top:5%;
+	left:25%;
+}
+
+.app-journey-next-icon {
+	font-size:30px;
+	position:absolute;
+	top:25%;
+	left:10%;
+	color:#0077cc;
+}
+
+.app-journey-select {
+	position:relative;
+	height:90px;
+	width:100%;
+	margin-top:1px;
+	cursor:pointer; 
+	background:#ffffff;
+	border-bottom: 1px rgba(52, 52, 54, 0.2) solid;
+}
+
