@@ -87,4 +87,4 @@ var journeys = [
 		"providerName": "SuperBus",
 		"class": "Ok",
 		"comfortLevel": "standard"
-	};
+	}];
