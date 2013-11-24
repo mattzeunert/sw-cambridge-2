@@ -11,6 +11,27 @@ function parseDate(str){
 	);
 }
 
+function journeysByTime(){
+	return _.sortBy(journeys, "departureTime")
+}
+
+function journeysByPrice(){
+	return _.sortBy(journeys, "price")
+}
+
+function journeysByComfort(){
+	var levels = ["economy", "standard", "premium"];
+	return _.sortBy(journeys, function(journey){
+		return -$.inArray(journey.comfortLevel, levels);
+	})
+}
+
+function journeysByLength(){
+	return _.sortBy(journeys, function(journey){
+		return journey.arrivalTime.valueOf() - journey.departureTime.valueOf();
+	});
+}
+
 var journeys = [
 	{
 		"id": 23,
