@@ -3,35 +3,167 @@
 	<head>
 		<link rel="stylesheet" href="styles/thirdparty/jquery.mobile.custom.structure.css"> 
 		<link rel="stylesheet" href="styles/stylesheets/screen.css">
-		<link rel="stylesheet" type="text/css" href="styles/font/icoentypo/entypo.css" />
+		<link rel="stylesheet" type="text/css" href="styles/stylesheets/font/icoentypo/entypo.css" />
 	
 	</head>
 	<body>
 		
 		
-		<div data-role="page" class="app_window" id="app_splashscreen" data-transition="pop">
-			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative;top:0px; margin-left:auto; margin-right:auto; ">
-				<div style="height:100px; width:200px; margin-left:auto; border:1px solid; margin-right:auto;">
-					<img src="content/images/bus.png" style=" height:60px; position:relative; left:10px; top:10px;">
-					<span style="color:white; font-size:23px; left:50px; top:40px; "> Jesse Bus
+		<div data-role="page" class="app_window" id="app_search" data-transition="pop">
+			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative; top:0px; margin-left:auto; margin-right:auto; ">
+				<div style="height:100px; width:250px; position:relative; margin-left:auto; margin-right:auto;">
+					<img src="content/images/bus1.png" style=" height:60px; position:relative; left:10px; top:30px;" />
+					<span style="color:white; font-size:34px; margin-left:25px; position:relative; top:15px; font-family:LatoLight; font-weight:800; "> Jesse Bus
 					</span>
 				</div>
 			</div>
+			
+			<div class="app-window-body" >
+				<div style="position:relative; overflow-y:auto; overflow-x:hidden; background:#ffffff; height:100%; width:99.9%;">
+					<div style="position:absolute; height:90px; width:100%; top:0; background:rgba(53, 176, 242, 0.01);">
+						<div style="position:relative;  font-size:18px; font-weight:700; margin-right:auto; margin-left:auto; margin-top:35px; text-align:center; border:0px #0077CC dashed; width:20%;"> 
+							SEARCH 
+						</div>
+					</div>
+					<div class="app-location-from" style="position:absolute; height:90px; width:100%; top:20%; cursor:pointer; background:rgba(52, 52, 54, 0.2);">
+						<div style="position:relative;  font-size:18px; font-weight:700; margin-right:auto; margin-left:auto; margin-top:35px; text-align:center; border:0px #0077CC dashed; width:40%;"> 
+							from Location
+						</div>
+					</div>
+					<div class="app-location-to" style="position:absolute; height:90px; width:100%; top:40%; cursor:pointer;  background:rgba(52, 52, 54, 0.3);">
+						<div style="position:relative;  font-size:18px; font-weight:700; margin-right:auto; margin-left:auto; margin-top:35px; text-align:center; border:0px #0077CC dashed; width:40%;"> 
+							to location
+						</div>
+					</div>
+					
+					<div class="app-search-date" style="position:absolute; height:90px; width:100%; top:60%; cursor:pointer;  background:rgba(52, 52, 54, 0.4);">
+						<input type="date" name="seachdate" style="position:relative;  font-size:23px; font-weight:700; margin-right:auto; margin-left:auto; margin-top:15px; text-align:center; border:0px #0077CC dashed; width:80%;">
+					</div>
+					
+				</div>
+				<div class="app-search-start" style="">
+					<div style="position:relative; font-weight:700; margin-right:auto; margin-left:auto; margin-top:25px; text-align:center; border:0px #0077CC dashed; width:20%;"> 
+						<span class="icon-checkmark" style=""> </span>
+					</div>
+				</div>
+			</div>
+			<div class="app-menu" >
+				<div  class="app-menu-item app-menu-search"> 
+					<div class="app-menu-icon icon-search menusearch"></div> 
+				</div>
+				<div class="app-menu-item app-menu-map"> 
+					<div class="app-menu-icon icon-map messagemenu"> </div>
+
+				</div>
+				<div class="app-menu-item app-menu-settings"> 
+					<div class="app-menu-icon  icon-cog settingsmenu"> </div> 
+				</div>
+				
+				
+				<div  class="app-menu-item menuclosed app-menu-info" > 
+					<div class="app-menu-icon icon-info2 infomenu" ></div> 
+				</div>
+			
+			</div>
+				
+				
 		</div>
 		
-		<div data-role="page" id="app_search" data-trasition="slide">
-			app search
+		<div data-role="page" class="app_window" id="app_map" data-transition="pop">
+			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative; top:0px; margin-left:auto; margin-right:auto; ">
+				<div style="height:100px; width:250px; position:relative; margin-left:auto; margin-right:auto;">
+					<img src="content/images/bus1.png" style=" height:60px; position:relative; left:10px; top:30px;" />
+					<span style="color:white; font-size:34px; margin-left:25px; position:relative; top:15px; font-family:LatoLight; font-weight:800; "> Jesse Bus
+					</span>
+				</div>
+			</div>
+			
+			<div class="app-window-body" >
+				<div style="position:relative; overflow-y:auto; overflow-x:hidden; background:#ffffff; height:100%; width:99.9%;">
+					<div id="app-map-viewer" style="height:100%; width:100%;">
+						
+					</div>
+				</div>
+				
+			</div>
+			<div class="app-menu" >
+				<div  class="app-menu-item app-menu-search"> 
+					<div class="app-menu-icon icon-search menusearch"></div> 
+				</div>
+				<div class="app-menu-item app-menu-map"> 
+					<div class="app-menu-icon icon-map messagemenu"> </div>
+
+				</div>
+				<div class="app-menu-item app-menu-settings"> 
+					<div class="app-menu-icon  icon-cog settingsmenu"> </div> 
+				</div>
+				
+				
+				<div  class="app-menu-item menuclosed app-menu-info" > 
+					<div class="app-menu-icon icon-info2 infomenu" ></div> 
+				</div>
+			
+			</div>
+				
+				
+		</div>
+		
+		<div data-role="page" id="splashscreen" data-trasition="slide">
+			
 		</div>
 		
 		<div data-role="page" id="app_search_results" data-trasition="slide">
 			app search results
 		</div>
 		
-		<!-- Page transitions for displaying city results results -->
-		<div data-role="page" id="app_search_city" data-trasition="slide">
+		<!-- Page transitions for displaying city results from results -->
+		<div data-role="page" id="app_search_city_from" data-trasition="slide" style="height:100%;">
 		
-			search cities
+			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative; top:0px; margin-left:auto; margin-right:auto; ">
+				<div style="height:100px; width:250px; position:relative; margin-left:auto; margin-right:auto;">
+					<img src="content/images/bus1.png" style=" height:60px; position:relative; left:10px; top:30px;">
+					<span style="color:white; font-size:34px; margin-left:25px; position:relative; top:15px; font-family:LatoLight; font-weight:800; "> Jesse Bus
+					</span>
+				</div>
+			</div>
+			
+			
+			<div class="app-window-body" >
+				<div style="position:relative; height:12%; width:100%;">
+					
+					<input type="text" class="lira-input" placeholder="Quick Search..." style="position:relative;  color:rgba(16, 6, 7, 0.77); width:99%; margin-top:5px;  font-size:25px; border-bottom:1px rgba(16, 6, 7, 0.77) solid; height:35px; font-family:'Lato'; border:0px; " />
+					
+				</div>
+					
+				<div class="app-cities-list-from" style="height:101%; overflow-y:auto;">
+					
+				</div>
+			</div>
+			
+		</div>
+		<!-- Page transitions for displaying city results from results -->
+		<div data-role="page" id="app_search_city_to" data-trasition="slide">
 		
+			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative; top:0px; margin-left:auto; margin-right:auto; ">
+				<div style="height:100px; width:250px; position:relative; margin-left:auto; margin-right:auto;">
+					<img src="content/images/bus1.png" style=" height:60px; position:relative; left:10px; top:30px;">
+					<span style="color:white; font-size:34px; margin-left:25px; position:relative; top:15px; font-family:LatoLight; font-weight:800; "> Jesse Bus
+					</span>
+				</div>
+			</div>
+			
+			<div class="app-window-body" >
+				<div style="position:relative; height:12%; width:100%;">
+					
+					<input type="text" class="lira-input" placeholder="Quick Search..." style="position:relative;  color:rgba(16, 6, 7, 0.77); width:99%; margin-top:5px;  font-size:25px; border-bottom:1px rgba(16, 6, 7, 0.77) solid; height:35px; font-family:'Lato'; border:0px; " />
+					
+				</div>
+					
+				<div class="app-cities-list-to" style="height:101%; overflow-y:auto;">
+					
+				</div>
+			</div>
+			
 		</div>
 		<!-- Page transitions for displaying city results -->
 		<div data-role="page" id="app_search_class" data-trasition="slide">
@@ -42,6 +174,9 @@
 		<script src="js/underscore.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.mobile.js"></script>
+		<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+		<script src="js/OpenLayers/OpenLayers.js"></script>
+		<script src="content/data/city.js"></script>
 		<script src="app.js"></script>
 		<script src="data.js"></script>
 		
