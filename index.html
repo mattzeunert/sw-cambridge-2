@@ -74,6 +74,21 @@
 				
 		</div>
 		
+
+		<div data-role="page" id="test">
+			<div style="overflow:hidden">
+				<div style="float: left; width: 33%">
+					<h2 style="margin: 0">{{operator}}</h2>
+				</div>
+				<div style="float: left;width: 33%">
+					18:00
+				</div>
+				<div style="float: left;width: 33%">
+					Price
+				</div>
+			</div>
+		</div>
+
 		<div data-role="page" class="app_window" id="app_map" data-transition="pop">
 			<div style="width:100%;	background:#35B0F2;	height:20%; position:relative; top:0px; margin-left:auto; margin-right:auto; ">
 				<div style="height:100px; width:250px; position:relative; margin-left:auto; margin-right:auto;">
@@ -240,12 +255,14 @@
 		</div>
 		
 		<div ng-view></div>
+		<script src="js/underscore.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.mobile.js"></script>
 		<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
 		<script src="js/OpenLayers/OpenLayers.js"></script>
 		<script src="content/data/city.js"></script>
 		<script src="app.js"></script>
+		<script src="data.js"></script>
 		
 		
 	</body>

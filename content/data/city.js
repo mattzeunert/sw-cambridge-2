@@ -1,4 +1,15 @@
+function searchCity(str){
+	str = str || "";
+	str = str.toLowerCase();
+	if (str === ""){
+		return cities;
+	}
 
+	var matches = _.filter(cities, function(city){
+		return city.name.toLowerCase().indexOf(str) !== -1;
+	})
+	return matches;
+}
 
 var cities = [
 	{id:"1", name:"Lima", region:"Lima", lon:"-77.0622", lat:"-12.04782"},
