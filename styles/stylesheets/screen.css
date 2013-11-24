@@ -102,14 +102,14 @@ body {
 .app-search-start {
 
 	position:absolute;
-	height:75px; 
+	height:68px; 
 	width:100%; 
-	top:80%; 
+	top:83%; 
 	cursor:pointer;  
 	color:white;
-	 font-size:25px; 
-	 margin-top:4px;
-	background:#5DB371;
+	font-size:25px; 
+	margin-top:4px;
+	background:#35B0F2;
 
 }
 

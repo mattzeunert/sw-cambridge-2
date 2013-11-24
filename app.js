@@ -11,8 +11,8 @@ var app = new function () {
 	
 	this.to_location = "";
 	
-	this.updatemap =  function(data_array) {
-		$("#app-map-viewer").html("");
+	this.updatemap =  function(data_array, map_port) {
+		$("#" + map_port).html("");
 		var lat            = data_array[0].lat;
     var lon            =  data_array[0].lon;
     var zoom           = 5;
@@ -23,7 +23,7 @@ var app = new function () {
     var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
     var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
     
-    map = new OpenLayers.Map("app-map-viewer");
+    map = new OpenLayers.Map(map_port);
 	console.log("...maps..");
     //var mapnik         = new OpenLayers.Layer.MQ();
     var mapnik         = new OpenLayers.Layer.Google();
@@ -140,7 +140,7 @@ $(".app-location-from").on( "click", function( event ){
 $(".app-location-to").on( "click", function( event ){
 	
 	$(".app-cities-list-to").html("");
-	
+	//
 	for(var i= 0 ; i < cities.length ; i ++ ) {
 		if(cities[i].name != app.from_location ) {
 			$(".app-cities-list-to").append("<div  class='app-location-select'><div class='app-location-select-var'> " + cities[i].name + " </div></div>");
@@ -172,11 +172,13 @@ $(".app-menu-search").on( "click", function( event ){
 			
 			console.log("test app menu search");
 });
-$(".app-search-start").on( "click", function( event ){
-	$.mobile.changePage("#app_map" ,
+$(".app-location-view").on( "click", function( event ){
+	
+	$.mobile.changePage("#app_map2" ,
 			{
 			  transition: "flip"
 			});
+	
 	var twopoints = [];
 	for(var i= 0 ; i < cities.length ; i ++ ) {
 		if(cities[i].name == app.from_location ) {
@@ -187,21 +189,27 @@ $(".app-search-start").on( "click", function( event ){
 			twopoints.push(cities[i]);
 		}
 	}
-	console.log(twopoints );
-	app.updatemap(twopoints);	
+	$.mobile.loading('show');
+	setTimeout(function(){app.updatemap(twopoints,"app-map-viewer2"); $.mobile.loading('hide');},1000);
+	//console.log(twopoints );
+	//app.updatemap(twopoints);	
 });
 
 
 $(".app-menu-map").on( "click", function( event ){
-	$("#app-map-viewer").html("");
 	$.mobile.changePage("#app_map" ,
 			{
 			  transition: "slide"
 			});
-	console.log(cities );
-	app.updatemap(cities);
+	app.updatemap(cities,"#app-map-viewer");
 	
 });
+
+$(".map-search-back").on( "click", function( event ){
+	
+	history.back();
+});
+
 
 $(".app-menu-settings").on( "click", function( event ){
 	
