@@ -8,7 +8,19 @@ function searchCity(str){
 	var matches = _.filter(cities, function(city){
 		return city.name.toLowerCase().indexOf(str) !== -1;
 	})
+
+	matches = _.sortBy(matches, function(city){
+		return strStartsWith(city.name, str) ? -1 : 1;
+	});
+
 	return matches;
+}
+
+function strStartsWith(str, strStart){
+	if (str.length < strStart.length){
+		return false; 
+	}
+	return str.toLowerCase().indexOf(strStart.toLowerCase()) === 0;
 }
 
 var cities = [
